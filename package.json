@@ -1,0 +1,22 @@
+{
+  "name": "phantom-bluebird",
+  "version": "0.0.1",
+  "description": "Core phantom modules promisified with bluebird",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epoberezkin/phantom-bluebird.git"
+  },
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epoberezkin/phantom-bluebird/issues"
+  },
+  "homepage": "https://github.com/epoberezkin/phantom-bluebird",
+  "dependencies": {
+    "bluebird": "^2.9.25"
+  }
+}
