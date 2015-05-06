@@ -18,10 +18,14 @@ This module can be used in phantomjs scripts to use promise api instead of non-s
 
 Same as phantomjs [webpage module](http://phantomjs.org/api/webpage/), but method `open` is promisified.
 
-```
-var pb = require('phantom-bluebird');
-var webpage = pb.webpage;
+```js
+require('phantom-bluebird')();
+// replaces webpage and child_process with modules from this package.
+// don't call this function if you don't want core modules replaced.
+
+var webpage = require('webpage');
 // or var webpage = require('phantom-bluebird/lib/webpage');
+// or var webpage = require('phantom-bluebird').webpage;
 
 var page = webpage.create();
 
@@ -47,9 +51,9 @@ Same as phantom [child_process module](http://phantomjs.org/api/child_process/),
 `spawn` method supports additional options (see example below).
 
 
-```
-var pb = require('phantom-bluebird');
-var spawn = pb.child_process.spawn;
+```js
+require('phantom-bluebird')();
+var spawn = require('child_process').spawn;
 // or var spawn = require('phantom-bluebird/lib/child_process').spawn;
 
 spawn('node', ['--harmony', 'app'], {
